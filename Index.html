@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Natural Home Made Products</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fffaf2;
+  color: #333;
+}
+
+header {
+  background: #6b8e23;
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+header p {
+  margin: 8px 0 0;
+}
+
+.owner {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.product {
+  background: white;
+  border-radius: 15px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+.product img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #eee;
+}
+
+.product h2 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6b8e23;
+  margin-bottom: 10px;
+}
+
+button,
+.change {
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.whatsapp {
+  background: #25D366;
+  color: white;
+}
+
+.location {
+  background: #4285F4;
+  color: white;
+}
+
+.change {
+  background: #777;
+  color: white;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 10px;
+  background: #6b8e23;
+  color: white;
+  margin-top: 20px;
+}
+
+@media (max-width: 500px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .product img {
+    height: 210px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🌿 Natural Home Made Products</h1>
+  <p>Healthy • Natural • Homemade</p>
+  <div class="owner">Owner: Aishwarya</div>
+</header>
+
+<div class="products">
+
+  <!-- ALMONDS -->
+  <div class="product">
+    <img id="img1" src="Almonds.jpg" alt="Almonds">
+    <h2>Almonds</h2>
+    <div class="price">₹111</div>
+
+    <button class="whatsapp"
+      onclick="orderProduct('Almonds',111)">
+      WhatsApp Order
+    </button>
+
+    <label class="change">
+      Add / Change Image
+      <input type="file" accept="image/*"
+        onchange="changeImage(event,'img1')">
+    </label>
+  </div>
+
+
+  <!-- CASHEWS -->
+  <div class="product">
+    <img id="img2" src="cashews.jpg" alt="Cashews">
+    <h2>Cashews</h2>
+    <div class="price">₹130</div>
+
+    <button class="whatsapp"
+      onclick="orderProduct('Cashews',130)">
+      WhatsApp Order
+    </button>
+
+    <label class="change">
+      Add / Change Image
+      <input type="file" accept="image/*"
+        onchange="changeImage(event,'img2')">
+    </label>
+  </div>
+
+
+  <!-- WALNUTS -->
+  <div class="product">
+    <img id="img3" src="walnuts.jpg" alt="Walnuts">
+    <h2>Walnuts</h2>
+    <div class="price">₹130</div>
+
+    <button class="whatsapp"
+      onclick="orderProduct('Walnuts',130)">
+      WhatsApp Order
+    </button>
+
+    <label class="change">
+      Add / Change Image
+      <input type="file" accept="image/*"
+        onchange="changeImage(event,'img3')">
+    </label>
+  </div>
+
+
+  <!-- PISTACHIO -->
+  <div class="product">
+    <img id="img4" src="pistachio.jpg" alt="Pistachio">
+    <h2>Pistachio</h2>
+    <div class="price">₹199</div>
+
+    <button class="whatsapp"
+      onclick="orderProduct('Pistachio',199)">
+      WhatsApp Order
+    </button>
+
+    <label class="change">
+      Add / Change Image
+      <input type="file" accept="image/*"
+        onchange="changeImage(event,'img4')">
+    </label>
+  </div>
+
+
+  <!-- DATES -->
+  <div class="product">
+    <img id="img5" src="dates.jpg" alt="Dates">
+    <h2>Dates</h2>
+    <div class="price">₹49</div>
+
+    <button class="whatsapp"
+      onclick="orderProduct('Dates',49)">
+      WhatsApp Order
+    </button>
+
+    <label class="change">
+      Add / Change Image
+      <input type="file" accept="image/*"
+        onchange="changeImage(event,'img5')">
+    </label>
+  </div>
+
+
+  <!-- RAISIN -->
+  <div class="product">
+    <img id="img6" src="raisin.jpg" alt="Raisin">
+    <h2>Raisin</h2>
+    <div class="price">₹49</div>
+
+    <button class="whatsapp"
+      onclick="orderProduct('Raisin',49)">
+      WhatsApp Order
+    </button>
+
+    <label class="change">
+      Add / Change Image
+      <input type="file" accept="image/*"
+        onchange="changeImage(event,'img6')">
+    </label>
+  </div>
+
+
+  <!-- ABC -->
+  <div class="product">
+    <img id="img7" src="abc.jpg" alt="ABC">
+    <h2>ABC</h2>
+    <div class="price">₹99</div>
+
+    <button class="whatsapp"
+      onclick="orderProduct('ABC',99)">
+      WhatsApp Order
+    </button>
+
+    <label class="change">
+      Add / Change Image
+      <input type="file" accept="image/*"
+        onchange="changeImage(event,'img7')">
+    </label>
+  </div>
+
+
+  <!-- BEETROOT -->
+  <div class="product">
+    <img id="img8" src="beetroot.jpg" alt="Beetroot">
+    <h2>Beetroot</h2>
+    <div class="price">₹99</div>
+
+    <button class="whatsapp"
+      onclick="orderProduct('Beetroot',99)">
+      WhatsApp Order
+    </button>
+
+    <label class="change">
+      Add / Change Image
+      <input type="file" accept="image/*"
+        onchange="changeImage(event,'img8')">
+    </label>
+  </div>
+
+
+  <!-- NELLI -->
+  <div class="product">
+    <img id="img9" src="nelli.jpg" alt="Nelli">
+    <h2>Nelli</h2>
+    <div class="price">₹99</div>
+
+    <button class="whatsapp"
+      onclick="orderProduct('Nelli',99)">
+      WhatsApp Order
+    </button>
+
+    <label class="change">
+      Add / Change Image
+      <input type="file" accept="image/*"
+        onchange="changeImage(event,'img9')">
+    </label>
+  </div>
+
+
+  <!-- CARROT -->
+  <div class="product">
+    <img id="img10" src="carrot.jpg" alt="Carrot">
+    <h2>Carrot</h2>
+    <div class="price">₹99</div>
+
+    <button class="whatsapp"
+      onclick="orderProduct('Carrot',99)">
+      WhatsApp Order
+    </button>
+
+    <label class="change">
+      Add / Change Image
+      <input type="file" accept="image/*"
+        onchange="changeImage(event,'img10')">
+    </label>
+  </div>
+
+</div>
+
+
+<footer>
+
+  <h3>📲 Contact / Order</h3>
+
+  <p>WhatsApp: 9008913495</p>
+
+  <button class="whatsapp" onclick="generalMessage()">
+    💬 Message Aishwarya
+  </button>
+
+  <button class="location" onclick="shareLocation()">
+    📍 Share Location
+  </button>
+
+  <p>Natural Home Made Products</p>
+  <p>Owner: Aishwarya</p>
+
+</footer>
+
+
+<script>
+
+const phone = "919008913495";
+
+
+function orderProduct(product, price) {
+
+  const message =
+    "Hello Aishwarya, I want to order " +
+    product +
+    " for ₹" +
+    price +
+    ".";
+
+  const url =
+    "https://wa.me/" +
+    phone +
+    "?text=" +
+    encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+
+
+function generalMessage() {
+
+  const message =
+    "Hello Aishwarya, I am interested in your Natural Home Made Products.";
+
+  const url =
+    "https://wa.me/" +
+    phone +
+    "?text=" +
+    encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+
+
+function shareLocation() {
+
+  if (!navigator.geolocation) {
+    alert("Location is not supported on this phone.");
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(
+
+    function(position) {
+
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+
+      const mapLink =
+        "https://www.google.com/maps?q=" +
+        lat +
+        "," +
+        lon;
+
+      const message =
+        "Hello Aishwarya, this is my location:\n" +
+        mapLink;
+
+      const url =
+        "https://wa.me/" +
+        phone +
+        "?text=" +
+        encodeURIComponent(message);
+
+      window.open(url, "_blank");
+    },
+
+    function() {
+      alert("Please allow location permission to share your location.");
+    }
+  );
+}
+
+
+function changeImage(event, imageId) {
+
+  const file = event.target.files[0];
+
+  if (!file) {
+    return;
+  }
+
+  const reader = new FileReader();
+
+  reader.onload = function(e) {
+    document.getElementById(imageId).src = e.target.result;
+  };
+
+  reader.readAsDataURL(file);
+}
+
+</script>
+
+</body>
+</html>
